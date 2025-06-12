@@ -1,0 +1,91 @@
+"DNS" : "de-c1w3-alb-1304158826.us-east-1.elb.amazonaws.com"
+de-c1w3-alb-1304158826.us-east-1.elb.amazonaws.com
+ab -n 1000000 -c 200 http://de-c1w3-alb-1304158826.us-east-1.elb.amazonaws.com/
+
+
+
+~ $ sudo yum install httpd-tools -y
+nodejs20                                                                                                   195 kB/s |  47 kB     00:00    
+Amazon Linux 2023 repository                                                                                68 MB/s |  37 MB     00:00    
+Dependencies resolved.
+===========================================================================================================================================
+ Package                            Architecture             Version                                   Repository                     Size
+===========================================================================================================================================
+Installing:
+ httpd-tools                        x86_64                   2.4.62-1.amzn2023                         amazonlinux                    81 k
+Installing dependencies:
+ apr                                x86_64                   1.7.5-1.amzn2023.0.4                      amazonlinux                   129 k
+ apr-util                           x86_64                   1.6.3-1.amzn2023.0.1                      amazonlinux                    98 k
+Installing weak dependencies:
+ apr-util-openssl                   x86_64                   1.6.3-1.amzn2023.0.1                      amazonlinux                    17 k
+
+Transaction Summary
+===========================================================================================================================================
+Install  4 Packages
+
+Total download size: 325 k
+Installed size: 741 k
+Downloading Packages:
+(1/4): apr-1.7.5-1.amzn2023.0.4.x86_64.rpm                                                                 3.0 MB/s | 129 kB     00:00    
+(2/4): apr-util-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                            1.9 MB/s |  98 kB     00:00    
+(3/4): apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                    314 kB/s |  17 kB     00:00    
+(4/4): httpd-tools-2.4.62-1.amzn2023.x86_64.rpm                                                            5.2 MB/s |  81 kB     00:00    
+(3/4): apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                    314 kB/s |  17 kB     00:00    
+
+~ $ ab -n 7000 -c 50 http://de-c1w3-alb-1304158826.us-east-1.elb.amazonaws.com/
+This is ApacheBench, Version 2.3 <$Revision: 1913912 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking de-c1w3-alb-1304158826.us-east-1.elb.amazonaws.com (be patient)
+Completed 700 requests
+Completed 1400 requests
+Completed 2100 requests
+Completed 2800 requests
+Completed 3500 requests
+Completed 4200 requests
+Completed 4900 requests
+Completed 5600 requests
+Completed 6300 requests
+Completed 7000 requests
+Finished 7000 requests
+
+
+Server Software:        Apache/2.4.62
+Server Hostname:        de-c1w3-alb-1304158826.us-east-1.elb.amazonaws.com
+Server Port:            80
+
+Document Path:          /
+Document Length:        99 bytes
+
+Concurrency Level:      50
+Time taken for tests:   5.697 seconds
+Complete requests:      7000
+Failed requests:        0
+Total transferred:      2480346 bytes
+HTML transferred:       693000 bytes
+Requests per second:    1228.81 [#/sec] (mean)
+Time per request:       40.690 [ms] (mean)
+Time per request:       0.814 [ms] (mean, across all concurrent requests)
+Transfer rate:          425.20 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    3   4.6      1      68
+Processing:     1   38 276.4      3    3613
+Waiting:        0   37 276.3      2    3601
+Total:          1   41 276.5      4    3614
+
+Percentage of the requests served within a certain time (ms)
+  50%      4
+  66%      7
+  75%      9
+  80%     12
+  90%     19
+  95%     32
+  98%     55
+  99%   1784
+ 100%   3614 (longest request)
+~ $ 
+
+
