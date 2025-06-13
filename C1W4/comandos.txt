@@ -1,0 +1,30 @@
+aws rds describe-db-instances --db-instance-identifier de-c1w4-rds --output text --query "DBInstances[].Endpoint.Address"
+
+de-c1w4-rds.cfcc4u6wmmod.us-east-1.rds.amazonaws.com
+
+mysql --host=de-c1w4-rds.cfcc4u6wmmod.us-east-1.rds.amazonaws.com --user=admin --password=adminpwrd --port=3306
+
+data_lake_bucket_id = "de-c1w4-381492090866-us-east-1-datalake"
+scripts_bucket_id   = "de-c1w4-381492090866-us-east-1-scripts"
+
+jr_e4ef076027ac38d07c5d571c020107ebd74a0796c176fa611e78ff8d4fe60723
+
+aws glue get-job-run --job-name de-c1w4-etl-job --run-id jr_e4ef076027ac38d07c5d571c020107ebd74a0796c176fa611e78ff8d4fe60723 --output text --query "JobRun.JobRunState
+
+aws glue get-job-run --job-name de-c1w4-etl-job --run-id jr_e4ef076027ac38d07c5d571c020107ebd74a0796c176fa611e78ff8d4fe60723 --output text --query "JobRun.JobRunState"
+
+
+ata_lake_bucket_id = "de-c1w4-381492090866-us-east-1-datalake"
+scripts_bucket_id = "de-c1w4-381492090866-us-east-1-scripts"
+vector_db_host = "de-c1w4-vector-db.cfcc4u6wmmod.us-east-1.rds.amazonaws.com"
+vector_db_master_password = tO8AQKSdJP4
+vector_db_master_username = postgres
+vector_db_port = 5432
+
+de-c1w4-381492090866-us-east-1-ml-artifacts 
+
+psql --host=de-c1w4-vector-db.cfcc4u6wmmod.us-east-1.rds.amazonaws.com --username=postgres --password --port=5432
+
+de-c1w4-vector-db.cfcc4u6wmmod.us-east-1.rds.amazonaws.com
+
+recommendations_bucket_id = "de-c1w4-381492090866-us-east-1-recommendations"
