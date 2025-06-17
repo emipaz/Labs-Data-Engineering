@@ -1,0 +1,143 @@
+# Quiz Modulo 1 Sistemas Fuente
+
+## Pregunta 1
+## ¿Cuál de las siguientes opciones representa un sistema fuente que contiene datos estructurados?
+
+- [ ] Archivo de vídeo de una conferencia.
+- [x] Base de datos relacional que contiene información sobre los clientes, en la que cada fila representa a un cliente y cada columna representa un atributo del cliente, como el nombre, la dirección y el número de teléfono.
+- [ ] Un archivo JSON que contiene perfiles de usuario, donde cada perfil enumera atributos como "firstName", "lastName" y "address" en un formato clave-valor.
+- [ ] Una recopilación de las opiniones de los clientes guardada en un archivo de texto.
+
+    > Buen trabajo Las bases de datos relacionales almacenan datos estructurados organizados en filas y columnas.
+
+## Pregunta 2
+## ¿Qué significa CRUD?
+
+- [ ] Conectar, Recibir, Utilizar, Desconectar
+- [x] Crear, leer, actualizar, eliminar
+- [ ] Calcular, recuperar, cargar, descargar
+- [ ] Copiar, Reemplazar, Deshacer, Destruir
+
+    > Así es CRUD es un patrón transaccional que indica que primero hay que crear los datos y luego se pueden leer, actualizar, y eliminar.
+
+## Pregunta 3
+## ¿Qué es un Sistema de administración de bases de datos (DBMS)?
+
+- [ ] Un DBMS es una API que estandariza la conexión a cualquier tipo de base de datos.
+- [ ] Un DBMS es una interfaz gráfica de usuario que ilustra el contenido de la base de datos.
+- [x] Un DBMS es la capa de software que se sitúa sobre el almacenamiento físico de la base de datos y permite gestionar los datos e interactuar con ellos.
+- [ ] Un DBMS es el conjunto de reglas que define cómo escribir consultas para acceder a los datos de una base de datos.
+
+## Pregunta 4
+## Según los vídeos de esta semana, ¿cuáles son las ventajas de aplicar la normalización a las bases de datos relacionales? Seleccione todas las que correspondan.
+
+
+- [ ] Garantiza la integridad de los datos
+
+    > Así es. Una estructura de base de datos relacional normalizada proporciona un alto grado de integridad y minimiza la redundancia al almacenar los datos entre tablas de forma lógica.
+
+- Minimiza la redundancia
+
+    > Buen trabajo Una estructura de base de datos relacional normalizada proporciona un alto grado de integridad y minimiza la redundancia al almacenar los datos entre tablas de forma lógica.
+
+- Mejora la velocidad de consulta (es decir, de recuperación) de los datos
+
+
+## Pregunta 5
+## ¿Cuál de las siguientes afirmaciones sobre claves primarias y foráneas es cierta?
+
+
+- [ ] Una clave foránea es una clave secundaria que ayuda a la clave primaria a identificar de forma exclusiva cada fila de su propia tabla.
+- [x] Una Clave foránea de una tabla puede hacer referencia a la clave primaria de otra tabla.
+- [ ] Las Claves primarias se utilizan en las bases de datos relacionales y las Claves foráneas en las bases de datos NoSQL.
+- [ ] Una Clave primaria y una Clave foránea son lo mismo y sirven para lo mismo en una base de datos.
+
+    > Así es. Las Claves foráneas se utilizan para establecer relaciones entre tablas haciendo referencia a la clave primaria o a una columna única de otra tabla.
+
+## Pregunta 6
+## ¿Cuál de las siguientes afirmaciones sobre las bases de datos relacionales y las bases de datos NoSQL es cierta?
+
+- [ ] Tanto las bases de datos relacionales como las NoSQL suelen ser compatibles con ACID
+- [ ] Las bases de datos relacionales no tienen que seguir un esquema estricto como las bases de datos NoSQL.
+- [ ] Tanto las bases de datos relacionales como las NoSQL admiten operaciones de unión complejas.
+- [x] Las bases de datos relacionales operan bajo el principio de consistencia fuerte, mientras que las bases de datos NoSQL operan bajo el principio de consistencia eventual.
+
+## Pregunta 7
+## Usted ha aprendido acerca de los cuatro principios de cumplimiento de ACID: atomicidad, consistencia, aislamiento y durabilidad.
+
+### Cuál de los siguientes representa un escenario que demuestra el principio de aislamiento?
+
+- [x] Dado que el saldo de una cuenta es de 20 $, si se producen al mismo tiempo dos transacciones que descuentan 10 $ cada una de la cuenta, el saldo de la cuenta será de 0 $ y no de 10 $ una vez completadas las dos transacciones.
+- [ ] Los datos almacenados en una base de datos de transacciones bancarias nunca se perderán, ni siquiera en caso de apagón.
+- [ ] Si existe la restricción de que el saldo bancario debe ser un número entero positivo, cualquier transacción que haga que el saldo sea inferior a cero debe fallar.
+- [ ] Una transacción bancaria que mueve dinero de la Cuenta A a la Cuenta B debe ejecutarse con actualizaciones de los saldos de ambas cuentas o fallar sin actualizar el saldo de ninguna de ellas.
+
+    > ¡Buen trabajo! El aislamiento garantiza que cuando varios clientes intentan ejecutar transacciones simultáneamente, cada transacción se ejecuta de forma independiente en orden secuencial.
+
+## Pregunta 8
+## ¿Cuál de los siguientes sistemas fuente puede almacenar Datos no estructurados? Seleccione todos los que corresponda.
+
+- [x] Almacenamiento de objetos
+
+    > ¡Buen trabajo! El almacenamiento de objetos puede almacenar datos no estructurados, como archivos de audio, vídeo y texto.
+
+- [ ] Almacén de documentos
+
+    > Los almacenes de documentos contienen datos semiestructurados almacenados en formato de documento.
+
+
+- [ ] Almacén clave-valor
+
+    > Los almacenes clave-valor contienen datos semiestructurados almacenados como pares clave-valor.
+
+
+- [x] Sistema de archivos
+
+    > Buen trabajo Los sistemas de archivos pueden almacenar datos no estructurados, como archivos de audio, vídeo y texto.
+
+## Pregunta 9
+## ¿Cuál de las siguientes afirmaciones es cierta sobre los registros?
+
+- [ ] Los registros almacenan una secuencia de registros en un orden aleatorio.
+- [ ] Los registros sólo contienen mensajes de error generados por una aplicación.
+- [ ] Los registros se utilizan para casos de uso de análisis posteriores, pero no para casos de uso de aprendizaje automático.
+- [x] Muchos sistemas de bases de datos tienen registros que puedes utilizar para realizar un seguimiento de los cambios en la base de datos.
+
+    > Así es Estos registros le ayudan a realizar un seguimiento de los cambios a través de un proceso conocido como captura de datos de cambios, o CDC.
+
+## Pregunta 10
+## Tanto las colas de mensajes como las plataformas de flujo de eventos son ejemplos de arquitecturas de flujo de eventos. ¿Cuál de las siguientes afirmaciones describe mejor las similitudes entre ambas? Seleccione todas las que procedan.
+
+
+- [ ] Ambos proporcionan almacenamiento persistente para los eventos transmitidos.
+- [x] Puedes encontrarlos como sistemas fuente o utilizarlos como herramientas de ingestión.
+
+    > ¡Buen trabajo! Cuando trabajas con sistemas de eventos como un sistema fuente, podría ser que tu fuente ascendente sea un simple productor de eventos, como un dispositivo IoT, y tu sistema, o el sistema que construyas más bien, comprenda tanto el enrutador como el consumidor de eventos. O puede ser que tu sistema fuente ascendente esté compuesto por múltiples productores, enrutadores y consumidores, y que los sistemas que construyas sean, de hecho, sólo otro consumidor descendente de eventos.
+
+- [x] Ambas arquitecturas se basan en la comunicación asíncrona entre un productor y un consumidor de eventos. 
+
+    > Buen trabajo Ambas arquitecturas se basan en la presencia de un enrutador de eventos o un corredor de mensajes que actúa como amortiguador entre el productor y el consumidor de eventos. El enrutador ayuda a desacoplar al productor del consumidor, lo que permite la comunicación asíncrona entre ambos, es decir, que el productor puede enviar mensajes al enrutador o corredor en cualquier momento y no tiene que esperar a que los consumidores consuman los mensajes. 
+
+
+- [ ] Ambos utilizan un enrutador basado en registros que retransmite mensajes de un productor de eventos a un consumidor de eventos.
+
+    > Las plataformas de flujo de eventos utilizan un enrutador basado en el registro de sólo apéndices. Las colas de mensajes utilizan un enrutador basado en la cola del primero en entrar, primero en salir.
+
+
+## Pregunta 11
+## ¿Cuál de las siguientes afirmaciones es cierta sobre los usuarios IAM y los roles IAM?
+
+- [ ] Las políticas sólo se adjuntan a los usuarios de IAM.
+- [ ] Un usuario IAM es alguien que ha asumido un rol IAM
+- [x] Un rol IAM puede ser asumido por cualquier recurso, usuario o aplicación.
+- [ ] Un usuario IAM tiene credenciales de seguridad temporales, mientras que a un rol IAM se le asignan credenciales a largo plazo.
+
+    > ¡Buen trabajo! Un recurso, usuario o aplicación puede asumir temporalmente un rol IAM para acceder a los recursos de AWS.
+
+## Pregunta 12
+## ¿Cuál de las siguientes afirmaciones es cierta sobre cómo se gestiona el tráfico dentro de una Nube privada virtual (VPC)?
+
+- [ ] Dentro de la misma VPC, los recursos creados en una subred pública no pueden comunicarse automáticamente con los recursos creados en una subred privada.
+- [x] Los recursos creados en una subred privada pueden enviar solicitudes a recursos externos a través de una pasarela NAT.
+- [ ] Los recursos creados en una subred pública pueden interactuar automáticamente con la Internet pública.
+- [ ] Los recursos de dos VPC diferentes pueden comunicarse entre sí por defecto. 
